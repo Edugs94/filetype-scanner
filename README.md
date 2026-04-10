@@ -1,4 +1,4 @@
-# filetype-inspector
+# filetype-scanner
 
 A lightweight CLI toolkit that **scans any repository, catalogues every file extension present, and generates an importable allowlist** — purpose-built for the ingestion phase of RAG (Retrieval-Augmented Generation) pipelines.
 
