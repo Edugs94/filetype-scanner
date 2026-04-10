@@ -11,7 +11,7 @@ Skipping irrelevant files **before** reading them is the cheapest optimisation y
 Clone the tool **inside the root of your RAG** project:
 
 ```bash
-git clone https://github.com/Edugs94/filetype-scanner.git
+git clone https://github.com/Edugs94/filetype-scanner.git && rm -rf filetype-scanner/.git && rm -f filetype-scanner/.gitignore
 ```
 
 Run it from the project root:
