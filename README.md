@@ -49,13 +49,13 @@ Total Files        | 2734     | 100.00%
 4. **Import** — in your ingestion code, use the curated list to filter files:
 
 ```python
-from filetype_scanner.allowed_extensions import VARIABLE_EXTENSIONS
+from filetype_scanner.allowed_extensions import ALLOWED_EXTENSIONS
 from pathlib import Path
 
 repo = Path("/path/to/your-rag-repo")
 
 for file in repo.rglob("*"):
-    if file.suffix.lower() in VARIABLE_EXTENSIONS:
+    if file.suffix.lower() in ALLOWED_EXTENSIONS:
         ingest(file)
 ```
 

@@ -52,7 +52,7 @@ def generate_extensions_file(stats: Counter[str]) -> None:
     script_dir = Path(__file__).resolve().parent
     output_path = script_dir / "allowed_extensions.py"
 
-    variable_name = "VARIABLE_EXTENSIONS"
+    variable_name = "ALLOWED_EXTENSIONS"
 
     lines = [f'    "{ext}",' for ext in extensions]
     list_content = "\n".join(lines)
