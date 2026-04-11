@@ -122,7 +122,7 @@ def main() -> None:
     )
 
     if len(sys.argv) < 2:
-        print("Run python3 filetype-scanner <folder_to_scan>", file=sys.stderr)
+        print("Run python3 filetype_scanner <folder_to_scan>", file=sys.stderr)
         sys.exit(1)
 
     args = parser.parse_args()

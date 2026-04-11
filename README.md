@@ -1,4 +1,4 @@
-# filetype-scanner
+# filetype_scanner
 
 A lightweight CLI toolkit that **scans any repository, catalogues every file extension present, and generates an importable allowlist** — purpose-built for the ingestion phase of RAG (Retrieval-Augmented Generation) pipelines.
 
@@ -11,16 +11,16 @@ Skipping irrelevant files **before** reading them is the cheapest optimisation y
 Clone the tool **inside the root of your RAG** project:
 
 ```bash
-git clone https://github.com/Edugs94/filetype-scanner.git && rm -rf filetype-scanner/.git && rm -f filetype-scanner/.gitignore
+git clone https://github.com/Edugs94/filetype_scanner.git && rm -rf filetype_scanner/.git && rm -f filetype_scanner/.gitignore
 ```
 
 Run it from the project root:
 
 ```bash
-python3 filetype-scanner <dir>
+python3 filetype_scanner <dir>
 ```
 
-That's it. You'll get a full report of every file type in your repository and an auto-generated `allowed_extensions.py` inside `filetype-scanner/` ready to curate:
+That's it. You'll get a full report of every file type in your repository and an auto-generated `allowed_extensions.py` inside `filetype_scanner/` ready to curate:
 
 ```
 --- RAG Source Scan: . ---
@@ -73,10 +73,10 @@ By filtering at the file-collection stage you avoid unnecessary I/O on irrelevan
 
 ```bash
 # scan a specific directory without generating the allowlist
-python3 filetype-scanner <dir> --no-list
+python3 filetype_scanner <dir> --no-list
 
 # include dotfiles and hidden folders
-python3 filetype-scanner <dir> --include-hidden
+python3 filetype_scanner <dir> --include-hidden
 ```
 
 ---
@@ -88,7 +88,7 @@ python3 filetype-scanner <dir> --include-hidden
 When the scan report shows extensions with low file counts — `no_ext`, `.patch`, `.tpl`, etc. — you probably want to **inspect those files before deciding** whether to keep or drop them. `get_types_path` gives you every matching file path instantly:
 
 ```bash
-python3 filetype-scanner/get_types_path.py no_ext <dir>
+python3 filetype_scanner/get_types_path.py no_ext <dir>
 ```
 
 ```
@@ -104,7 +104,7 @@ python3 filetype-scanner/get_types_path.py no_ext <dir>
 It also works for any regular extension:
 
 ```bash
-python3 filetype-scanner/get_types_path.py .cu ./csrc
+python3 filetype_scanner/get_types_path.py .cu ./csrc
 ```
 
 | Argument | Description |
